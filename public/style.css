@@ -10,8 +10,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-
-
+    font-family: 'Inconsolata', monospace;
 }
 
 a {
@@ -20,18 +19,36 @@ a {
 
 strong {
     color: #ffcc00;
-
 }
 
-h2, p, li {
-    font-size: 8pt;
-    line-height: 12pt;
+h2 {
+    font-size: 14pt;
+    line-height: 16pt;
+    text-transform: uppercase;
+    
 }
+
+
+h3 {
+    font-size: 12pt;
+    line-height: 14pt;
+}
+
+
+
+p, li, i {
+    font-size: 12pt;
+    line-height: 14pt;
+}
+
 
 ul {
+    padding-top: 10px;
     list-style: none;
     margin: 0px;
     padding-left: 5px;
+    font-size: 12pt;
+    line-height: 14pt;
 }
 
 
@@ -74,12 +91,13 @@ ul {
     padding: 2px 0;
     visibility: visible;
     width: 90%;
+    font-size: 10pt;
 
 }
 
 .lt-header-left-section {
     float: left;
-    width: 80%;
+    width: 70%;
     background-color: #000;
     margin-left: -5px;
     padding: 0 8px;
@@ -87,7 +105,7 @@ ul {
 
 .lt-header-right-section {
     float: right;
-    width: 10%;
+    width: 20%;
     background-color: #000;
     text-align: right;
     margin-right: -5px;
@@ -104,8 +122,11 @@ ul {
 }
 
 .content {
+    display: flex;
+    flex-direction: column;
     border: 1px solid #1b2f2d;
-    height: 99%;
+    height: calc( 100% - 3px );
+    
 }
 
 .content-container h2 {
@@ -125,8 +146,8 @@ ul {
 
 }
 
-.content-container p {
-    margin: 2px 0 0;
+.content-container p, h3, i {
+    margin: 10px 0 5px;
     padding: 4px 6px;
 
 }
@@ -137,7 +158,8 @@ ul {
 #lt-left-column{
     position: relative;
     width: 50%;
-    
+
+      
     display: flex;           
     flex-direction: column;  
     align-items: center; 
@@ -186,7 +208,7 @@ ul {
 /* ================================= Bottom small boxes left ================================ */
 
 #lt-bottom-boxes-1 {
-    margin-top: 1px;
+    margin-top: 5px;
     float: right;
     border: 1px solid #6fc0ba;
     border-radius: 2px;
@@ -195,7 +217,7 @@ ul {
 }
 
 #lt-bottom-boxes-2 {
-    margin-top: 1px;
+    margin-top: 5px;
     margin-right: 6px;
     float: right;
     border: 1px solid #1b2f2d;
@@ -205,7 +227,7 @@ ul {
 }
 
 #lt-bottom-boxes-3 {
-    margin-top: 1px;
+    margin-top: 5px;
     margin-right: 4px;
     float: right;
     border: 1px solid #6fc0ba;
@@ -228,18 +250,66 @@ ul {
 }
 
 #lt-readme .content {
-    overflow: visible;
+    overflow: auto;
 }
 
 
-/* ================================= bandwidth ================================= */
-#lt-bandwidth {
+/* ================================= lt-input ================================= */
+
+#lt-input {
     position: relative;
-    margin-top: 50px; 
-    height: calc(38% - 50px); ;
+    margin-top: 30px;
+    height: calc( 39% - 50px);
+    font-size: 10pt;
+}
+
+#lt-command-line {
+    width: calc(100% - 10px);
+    float: left;
+    height: 100%;
+    margin-top: 5px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+#lt-command-lines {
+    white-space: nowrap;
+}
+
+#lt-command-line-header {
+    border-bottom: 1px dashed #fff;
+    padding-bottom: 3px;
+    text-transform: uppercase;
 
 }
 
+
+.command {
+    clear: both;
+    padding-top: 5px;
+    font-size: 8pt;
+    font-size: 10pt;
+    color: #aaa; 
+}
+
+[contenteditable]:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+
+
+.command-text {
+    color: #aaa;
+}
+
+
+
+.prompt {
+  user-select: none;
+  pointer-events: none;
+}
 
 
 
@@ -248,19 +318,18 @@ ul {
 #lt-globalization {
     position: relative;
     top: 60px;
-    height: 50%;
-
+    height: calc(50% - 70px + 39%);
 }
 
 #lt-globalization .content {
-    overflow: hidden;
+    overflow: auto;
 }
 
 
 /* ================================= Folder ================================= */
 
 .folder-container {
-    margin: 8px 18px 0;
+    margin: 0px 18px 10px;
     float: left;
     cursor: pointer;
 }
@@ -307,255 +376,3 @@ ul {
 
 
 
-
-
-
-/* ================================= MEDIA ================================= */
-
-@media (min-width: 1600px) { 
-    body {
-    background-color: black;
-    font-size:6pt;
-    color: #fff;
-
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-
-
-    }
-
-    a {
-        color: #00eeee;
-    }
-
-    strong {
-        color: #ffcc00;
-
-    }
-
-    h2, p, li {
-        font-size: 8pt;
-        line-height: 12pt;
-    }
-
-    ul {
-        list-style: none;
-        margin: 0px;
-        padding-left: 5px;
-    }
-
-
-
-
-    /* ================================= light table (lt) ================================= */
-
-    .container-border{
-        border: 2px solid #6fc0ba;
-        border-radius: 5px;
-        box-shadow: 0 0 2px #005b8e, inset 0 0 2px #005b8e;
-    }
-
-
-    #lt-container-outside{
-        position:relative;
-        width: 95vw;
-        height: 97vh;
-        z-index: 10;
-        
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-
-    #lt-container-inside {
-        position:relative;
-        width: 97%;
-        height: 98%;
-        z-index: 20;
-        display: flex;
-    }
-
-    /* ================================= Columns & Content classes ================================= */
-    .lt-header{
-        border-top: 1px solid #1d2c33;
-        border-bottom: 1px solid #1d2c33;
-        color: #fff;
-        padding: 2px 0;
-        visibility: visible;
-        width: 90%;
-
-    }
-
-    .lt-header-left-section {
-        float: left;
-        width: 80%;
-        background-color: #000;
-        margin-left: -5px;
-        padding: 0 8px;
-    }
-
-    .lt-header-right-section {
-        float: right;
-        width: 10%;
-        background-color: #000;
-        text-align: right;
-        margin-right: -5px;
-        padding: 0 8px;
-    }
-
-
-
-    .content-container {
-        border: 2px solid #6fc0ba;
-        border-radius: 2px;
-        padding: 3px;
-        width: 90%;
-    }
-
-    .content {
-        border: 1px solid #1b2f2d;
-        height: 99%;
-    }
-
-    .content-container h2 {
-        color: #fff;
-        margin: 0;
-        border-bottom: 1px solid #1b2f2d;
-        padding: 2px 4px;
-        font-weight: bold;
-    }
-
-    .content-container h2 em{
-        font-style: normal;
-        float: right;
-        font-size: .8em;
-        padding-top: 1px;
-        color: #00eeee;
-
-    }
-
-    .content-container p {
-        margin: 2px 0 0;
-        padding: 4px 6px;
-
-    }
-
-
-    /* ================================= Left & right Columns ================================= */
-    #lt-left-column{
-        position: relative;
-        width: 50%;
-        
-        display: flex;           
-        flex-direction: column;  
-        align-items: center; 
-
-    }
-    #lt-right-column{
-        position: relative;
-        width: 50%;
-
-        display: flex;           
-        flex-direction: column;  
-        align-items: center; 
-    }
-
-
-    #lt-header-top-left {
-        position: relative;
-        top: 30px;
-    }
-    #lt-header-top-right {
-        position: relative;
-        top: 30px;
-    }
-
-    #lt-header-bottom-left {
-        position: absolute;
-        bottom: 30px;
-    }
-    #lt-header-bottom-right {
-        position: absolute;
-        bottom:  30px;
-
-    }
-
-    #lt-header-bottom-left .lt-header-left-section{
-        width: 45%
-    }
-    #lt-header-bottom-left .lt-header-right-section{
-        width: 45%
-    }
-
-
-    /* ================================= Bottom small boxes left ================================ */
-
-    #lt-bottom-boxes-1 {
-        margin-top: 1px;
-        float: right;
-        border: 1px solid #6fc0ba;
-        border-radius: 2px;
-        height: 4px;
-        width: 35px;
-    }
-
-    #lt-bottom-boxes-2 {
-        margin-top: 1px;
-        margin-right: 6px;
-        float: right;
-        border: 1px solid #1b2f2d;
-        border-radius: 2px;
-        height: 4px;
-        width: 25px;
-    }
-
-    #lt-bottom-boxes-3 {
-        margin-top: 1px;
-        margin-right: 4px;
-        float: right;
-        border: 1px solid #6fc0ba;
-        border-radius: 2px;
-        height: 4px;
-        width: 30px;
-    }
-
-
-    /* ================================= README ================================= */
-    #lt-readme {
-        position: relative;
-        overflow: visible;
-        margin-top: 60px; 
-        height: calc(50% - 60px); 
-    }
-
-    #lt-readme .content {
-        overflow: visible;
-    }
-
-
-    /* ================================= bandwidth ================================= */
-    #lt-bandwidth {
-        position: relative;
-        margin-top: 50px; 
-        height: calc(38% - 50px); ;
-
-    }
-
-    /* ================================= globalization ================================= */
-
-    #lt-globalization {
-        position: relative;
-        top: 60px;
-        height: 50%;
-    }
-
-    #lt-globalization .content {
-        overflow: hidden;
-    }
-}
