@@ -1,36 +1,6 @@
-body {
-    background-color: black;
-    font-size:6pt;
-    /* color: #6fc0ba; */
-    color: #fff;
-}
 
-a {
-    color: #00eeee;
-}
 
-strong {
-    color: #ffcc00;
 
-}
-
-h2, p, li {
-    font-size: 8pt;
-    line-height: 12pt;
-}
-
-ul {
-    list-style: none;
-    margin: 0px;
-    padding-left: 5px;
-}
-
-.container-border{
-
-    border: 2px solid #6fc0ba;
-    border-radius: 5px;
-    box-shadow: 0 0 2px #005b8e, inset 0 0 2px #005b8e;
-}
 #lt-container-outside{
     position:absolute;
     width: 1140px;

@@ -17,36 +17,11 @@
 
 
 
-<p class="description">
-Thoughtful planning and optimization of
-queuing systems is essential to many realworld domains, such as computer networking, manufacturing, customer service or
-healthcare. Accurate modeling, analysis and
-simulation of queues is paramount to understand performance bottlenecks, system
-behavior and resource allocation. Several
-tools exist to solve these problems, yet they
-often construct a false dichotomy: Some are
-general-purpose platforms with steep learning curves, while others are simplistic and do
-not align with modern queuing theory
+<p>
+"Queueing theory is the mathematical study of waiting lines, or queues." wikipedia: <a href="https://en.wikipedia.org/wiki/Queueing_theory">Queueing theory</a>
+
+
 </p>
 
-
-<p class="description">
-This paper introduces AQL, a domain-specific programming language designed for
-construction and simulation of complex
-queuing networks with simplicity and expressiveness, without losing mathematical
-accuracy needed for performance analysis.
-</p>
-
-
-<p class="description">
-Both the theoretical foundations for queuing analysis and existing tools are explored,
-before detailing the design, definition and
-implementation of AQL. Lastly, a demonstration is presented showing how AQL can
-simplify the simulation of an airport queuing
-system and extract important performance
-metrics for future planning and optimization.
-</p>
-
-<time id="published">
-
-</time>
+<p class="description"> AQL is a domain-specific language for modeling and simulating queuing networks. The language was developed by first defining its formal syntax and semantics: the static semantics ensures the models are valid and consistent according to the rules of the language, while the dynamic semantics defines how the models behave during simulation. ANTLR was then used to generate a parser that translates models into executable simulations.
+     AQL combines simplicity with mathematical accuracy for performance analysis and supports efficient simulation of queuing systems such as airports. </p>
