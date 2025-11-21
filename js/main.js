@@ -10,7 +10,7 @@ folders.forEach(folder => {
 
 // Extract fetch logic into a function
 function loadFolder(folderId) {
-    const filePath = `../files/${folderId}.html`; 
+    const filePath = `./files/${folderId}.html`; 
     fetch(filePath)
         .then(response => {
             if (!response.ok) {
